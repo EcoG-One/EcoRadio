@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg2"
+    viewBox="0 0 589.43 109.57"
+    version="1.0"
+  >
+  <defs
+      id="defs4"
+    >
+    <filter
+        id="filter3316"
+      >
+      <feGaussianBlur
+          id="feGaussianBlur3318"
+          stdDeviation="0.58671616"
+      />
+    </filter
+    >
+  </defs
+  >
+  <g
+      id="layer1"
+      transform="translate(-4.3571 -19.577)"
+    >
+    <g
+        id="g3500"
+      >
+      <g
+          id="g3356"
+          transform="translate(-104 -197.93)"
+        >
+        <path
+            id="path2383"
+            style="fill-rule:evenodd;filter:url(#filter3316);stroke:#000000;fill:#000000"
+            d="m211.43 266.65a54.286 51.429 0 1 1 -108.57 0 54.286 51.429 0 1 1 108.57 0z"
+            transform="matrix(.99975 0 0 1.0553 6.0393 -9.0992)"
+        />
+        <rect
+            id="rect3237"
+            style="fill-rule:evenodd;stroke:#ffffff;stroke-width:.93142;fill:#e6e6e6"
+            ry="0"
+            height="56.783"
+            width="17.211"
+            y="243.9"
+            x="170.54"
+        />
+        <rect
+            id="rect3239"
+            style="fill-rule:evenodd;stroke:#ffffff;stroke-width:.93142;fill:#e6e6e6"
+            ry="0"
+            height="56.783"
+            width="17.211"
+            y="243.9"
+            x="138.54"
+        />
+        <path
+            id="path3245"
+            style="opacity:.5;stroke-opacity:.18257;fill-rule:evenodd;stroke:#000000;fill:#ffffff"
+            d="m162.66 219.16c-29.13 0-52.78 24.32-52.78 54.28 46.89-10.61 58.32-10.75 105.53 0 0-29.96-23.62-54.28-52.75-54.28z"
+        />
+      </g
+      >
+      <g
+          id="g3336"
+          transform="translate(-104.86 -198)"
+        >
+        <path
+            id="path3320"
+            style="fill-rule:evenodd;filter:url(#filter3316);stroke:#000000;fill:#000000"
+            d="m211.43 266.65a54.286 51.429 0 1 1 -108.57 0 54.286 51.429 0 1 1 108.57 0z"
+            transform="matrix(.99975 0 0 1.0553 126.9 -9.028)"
+        />
+        <rect
+            id="rect3324"
+            style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1.7359;fill:#e6e6e6"
+            ry="0"
+            height="58.264"
+            width="58.264"
+            y="243.23"
+            x="254.87"
+        />
+        <path
+            id="path3326"
+            style="opacity:.5;stroke-opacity:.18257;fill-rule:evenodd;stroke:#000000;fill:#ffffff"
+            d="m283.51 219.23c-29.13 0-52.78 24.32-52.78 54.28 46.9-10.61 58.32-10.75 105.53 0 0-29.96-23.62-54.28-52.75-54.28z"
+        />
+      </g
+      >
+      <g
+          id="g3368"
+          transform="translate(-105,-200)"
+        >
+        <path
+            id="path3343"
+            style="fill-rule:evenodd;filter:url(#filter3316);stroke:#000000;fill:#000000"
+            d="m211.43 266.65a54.286 51.429 0 1 1 -108.57 0 54.286 51.429 0 1 1 108.57 0z"
+            transform="matrix(.99975 0 0 1.0553 247.9 -7.028)"
+        />
+        <path
+            id="path3366"
+            style="stroke-opacity:.18257;fill-rule:evenodd;stroke:#ffffff;fill:#e6e6e6"
+            d="m233 452.36l-44.05 22.43-44.05 22.44 2.6-49.37 2.6-49.36 41.45 26.93 41.45 26.93z"
+            transform="matrix(.70219 -.033524 .034618 0.68 263.88 -25.238)"
+        />
+        <path
+            id="path3347"
+            style="opacity:.5;stroke-opacity:.18257;fill-rule:evenodd;stroke:#000000;fill:#ffffff"
+            d="m404.51 221.23c-29.13 0-52.78 24.32-52.78 54.28 46.9-10.61 58.32-10.75 105.53 0 0-29.96-23.62-54.28-52.75-54.28z"
+        />
+      </g
+      >
+      <g
+          id="g3486"
+          transform="translate(-4 2.7855)"
+        >
+        <path
+            id="path3375"
+            style="fill-rule:evenodd;filter:url(#filter3316);stroke:#000000;fill:#000000"
+            d="m211.43 266.65a54.286 51.429 0 1 1 -108.57 0 54.286 51.429 0 1 1 108.57 0z"
+            transform="matrix(.99975 0 0 1.0553 264.9 -209.81)"
+        />
+        <g
+            id="g3398"
+            style="stroke:#ffffff;fill:#e6e6e6"
+            transform="matrix(0 1.3126 -1.3126 0 830.87 -749.14)"
+          >
+          <path
+              id="path3388"
+              style="stroke-opacity:.18257;fill-rule:evenodd;stroke:#ffffff;fill:#e6e6e6"
+              d="m323 453.36l-89.75 36.82-89.74 36.81 12.99-96.13 12.99-96.13 76.76 59.32 76.75 59.31z"
+              transform="matrix(-.028218 -.20148 .20148 -.028218 543.17 382.34)"
+          />
+          <path
+              id="path3390"
+              style="stroke-opacity:.18257;fill-rule:evenodd;stroke:#ffffff;fill:#e6e6e6"
+              d="m323 453.36l-89.75 36.82-89.74 36.81 12.99-96.13 12.99-96.13 76.76 59.32 76.75 59.31z"
+              transform="matrix(-.028218 -.20148 .20148 -.028218 542.61 359.09)"
+          />
+        </g
+        >
+        <path
+            id="path3379"
+            style="opacity:.5;stroke-opacity:.18257;fill-rule:evenodd;stroke:#000000;fill:#ffffff"
+            d="m421.51 18.442c-29.13 0-52.78 24.323-52.78 54.281 46.9-10.605 58.32-10.745 105.53 0 0-29.958-23.62-54.281-52.75-54.281z"
+        />
+      </g
+      >
+      <g
+          id="g3493"
+          transform="translate(-6)"
+        >
+        <path
+            id="path3402"
+            style="fill-rule:evenodd;filter:url(#filter3316);stroke:#000000;fill:#000000"
+            d="m211.43 266.65a54.286 51.429 0 1 1 -108.57 0 54.286 51.429 0 1 1 108.57 0z"
+            transform="matrix(.99975 0 0 1.0553 387.9 -207.03)"
+        />
+        <g
+            id="g3406"
+            style="stroke:#ffffff;fill:#e6e6e6"
+            transform="matrix(0 -1.3126 1.3126 0 136.13 895.08)"
+          >
+          <path
+              id="path3408"
+              style="stroke-opacity:.18257;fill-rule:evenodd;stroke:#ffffff;fill:#e6e6e6"
+              d="m323 453.36l-89.75 36.82-89.74 36.81 12.99-96.13 12.99-96.13 76.76 59.32 76.75 59.31z"
+              transform="matrix(-.028218 -.20148 .20148 -.028218 543.17 382.34)"
+          />
+          <path
+              id="path3410"
+              style="stroke-opacity:.18257;fill-rule:evenodd;stroke:#ffffff;fill:#e6e6e6"
+              d="m323 453.36l-89.75 36.82-89.74 36.81 12.99-96.13 12.99-96.13 76.76 59.32 76.75 59.31z"
+              transform="matrix(-.028218 -.20148 .20148 -.028218 542.61 359.09)"
+          />
+        </g
+        >
+        <path
+            id="path3404"
+            style="opacity:.5;stroke-opacity:.18257;fill-rule:evenodd;stroke:#000000;fill:#ffffff"
+            d="m544.51 21.227c-29.13 0-52.78 24.324-52.78 54.282 46.9-10.605 58.32-10.745 105.53 0 0-29.958-23.62-54.282-52.75-54.282z"
+        />
+      </g
+      >
+    </g
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >Glossy media player buttons - Inverted</dc:title
+        >
+        <dc:date
+          >2008-08-19T22:31:09</dc:date
+        >
+        <dc:description
+          >The buttons created by bugmenot, but inverted.</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/18510/glossy-media-player-buttons---inverted-by-portablejim</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >portablejim</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >button</rdf:li
+            >
+            <rdf:li
+              >glossy</rdf:li
+            >
+            <rdf:li
+              >media player</rdf:li
+            >
+            <rdf:li
+              >pause</rdf:li
+            >
+            <rdf:li
+              >play</rdf:li
+            >
+            <rdf:li
+              >remix</rdf:li
+            >
+            <rdf:li
+              >stop</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

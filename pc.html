@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echoradio</title>
+<meta name="description" content="Spanning over 8 decades and almost every popular genre, EchoRadio’s music is the Soundtrack of Our Lives.">
+<meta name="author" content="EcoG">
+<meta property="og:title" loaded="no" content="EchoRadio">
+<meta property="og:type" loaded="no" content="music.radio_station">
+<meta property="og:url" loaded="no" content="http://echoradio.de">
+<meta property="og:site_name" loaded="no" content="EchoRadio">
+<meta property="og:description" loaded="no" content="The Soundtrack of Our Lives">
+<meta property="og:image" loaded="no" content="images/logo.png">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+<script type="text/javascript" src="js/jquery.js?ver=1.11.3"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js?ver=1.2.1"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+	
+/* On Scroll Create Black Bar and remove it on home page*/
+$('#clockweather').hide();	
+$(document).scroll(function(){
+   $("#menuheader").css("background", "black");
+    $('.text').hide(); 
+	$('#clockweather').show();
+  if ($(document).scrollTop() == 0) {
+	  $('.text').show(); 
+	  $('#clockweather').hide();
+   $("#menuheader").css("background", "transparent")}; 	
+}); 
+ 
+ /* Player Selection*/
+if(WURFL.is_mobile){
+	$("#FlashPlayer").remove();
+	if(WURFL.complete_device_name.search("Xperia") >= 0)
+	 {$("#aac").remove()}
+	  else
+	   {$("#ogg").remove()}
+		}
+ else {
+	$("#html5Player").remove();
+	 };	
+	 
+/*HIDE OR SHOW CONTACT FORM */
+$("#Contact_form").hide();
+$("#Contact_button").click(function(){
+    $("#Contact_form").show();
+})
+$("#Contact_hide").click(function(){
+    $("#Contact_form").hide();
+});
+
+/*HIDE OR SHOW RADIO BAR */	 
+  $(".radio-player-open-hidden").click(function () {
+    $("#radio-player #radio-player-col").slideToggle({
+      direction: "up"
+    }, 100);
+    $(this).toggleClass("clientsClose");
+  });
+   $("#radio-player-col").show();
+   
+   function mouseHandler(e){
+  if ($(this).hasClass("radio-player-hidden-open")) {
+    $(this).removeClass("radio-player-hidden-open");
+  } else {
+    $(".radio-player-hidden-open").removeClass("radio-player-hidden-open");
+    $(this).addClass("radio-player-hidden-open");
+  } 
+};
+
+function start(){
+  $(".radio-player-open-hidden").bind("click", mouseHandler);
+}
+$(document).ready(start);
+  
+});
+
+</script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+@font-face {
+	font-family: 'Harlow-Solid-Italic';
+	src: url('fonts/Harlow-Solid-Italic.ttf.woff') format('woff'),  url('fonts/Harlow-Solid-Italic.ttf.svg#Harlow-Solid-Italic') format('svg'),  url('fonts/Harlow-Solid-Italic.ttf.eot'),  url('fonts/Harlow-Solid-Italic.ttf.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('fonts/opensans-light-webfont.eot');
+	src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-light-webfont.woff2') format('woff2'), url('fonts/opensans-light-webfont.woff') format('woff'), url('fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	-ms-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100% -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+ box-sizing: border-box -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+}
+html, body {
+	height: 100%;
+}
+body {
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+h1, h1 a {
+	color: #FF3838;
+	font: 100 28px 'open_sanslight', arial, trebuchet ms, verdana, tahoma, sans-serif;
+	padding: 10px 0;
+	margin: 0;
+	letter-spacing: -3px
+}
+h2, h2 a {
+	color: #666;
+	font: 100 24px 'open_sanslight', arial, trebuchet ms, verdana, tahoma, sans-serif;
+	padding: 10px 0;
+	margin: 0;
+	letter-spacing: -2px
+}
+h5 {
+	color: #333;
+	font: 100 18px 'open_sanslight', arial, trebuchet ms, verdana, tahoma, sans-serif;
+	padding: 5px 0;
+	margin: 0
+}
+p {
+	letter-spacing: 1px;
+	color: #c3c3c3;
+	font-weight: lighter;
+}
+figure {
+	display: inline;
+}
+figcaption {
+	display: inline;
+	position: relative;
+	top: 60px;
+	right: 96px;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit
+}
+.center, .aligncenter {
+	text-align: center;
+	display: block;
+	margin: 10px auto!important;
+	padding: 8px
+}
+.clear {
+	clear: both
+}
+.main {
+	background: url(images/irongrip.png);
+	width: 100%;
+	z-index: 10000
+}
+.nonmain {
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 10000;
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	position: relative;
+	background: #000;
+	padding-top: 90px;
+}
+.text {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+svg {
+	width: 100%;
+	height: inherit;
+}
+svg text {
+	text-anchor: middle;
+}
+svg #alpha, svg #alpha1 {
+	fill: #b3b3b3;
+}
+svg #title, svg #title1 {
+	letter-spacing: -10px;
+	font-size: 12em;
+	font-weight: normal;
+	font-family: 'Harlow-Solid-Italic', arial, sans-serif;
+}
+svg #subtitle, svg #subtitle1 {
+	letter-spacing: 9.5px;
+	font-size: 1.2em;
+	font-weight: 100;
+	font-family: 'Open Sans', arial, sans-serif;
+	text-transform: uppercase;
+}
+section.intro {
+	background: url(images/mic1920.jpg) no-repeat top center;
+	background-size: 100%;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+.headbar {
+	background: transparent url(images/logo.png) no-repeat 0 0;
+	width: 150px;
+	height: 134px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline-block;
+	z-index: 99999!important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	-ms-transition: -ms-transform 1s;
+	transition: transform 1s
+}
+.headbar:hover {
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-o-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	-ms-transition: -ms-transform 1s;
+	transition: transform 1s
+}
+.headbar h1, .headbar h1 a {
+	display: block;
+	height: 134px;
+	width: 100%;
+	text-indent: -900000px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	z-index: 99999!important
+}
+.headbar h2 {
+	text-indent: -900000px
+}
+.nav {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	font: 100 18px 'open_sanslight', Roboto, helvetica, arial, futura lt medium, trebuchet ms, verdana, tahoma, sans-serif;
+	color: #DDC9A7;
+	float: right;
+}
+.nav > li > a {
+	text-decoration: none;
+	color: #FF3838
+}
+.textwrap, .about-text {
+	background: transparent;
+	width: 90%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: 5%;
+	margin-bottom: 0;
+	padding: 0
+}
+.about-text {
+	position: absolute;
+}
+#facebook {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	bottom: 7px;
+}
+#facebook:hover {
+	background: url(images/facebook-hover.png) no-repeat 2px 2px;
+}
+#twitter {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	bottom: 7px;
+}
+#twitter:hover {
+	background: url(images/twitter-hover.png) no-repeat 1px 2px;
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+section.intro {
+	background: url(images/mic768.jpg) no-repeat top center;
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 10em;
+}
+svg #subtitle, svg #subtitle1 {
+	letter-spacing: 2px;
+}
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+.nonmain {
+	padding-top: 60px;
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 5em;
+}
+svg #subtitle, svg #subtitle1 {
+	display: none;
+}
+section.intro {
+	background: url(images/mic480.jpg) no-repeat top center;
+}
+.headbar {
+	background: transparent url(images/logo75.png) no-repeat 0 0;
+	width: 67px;
+	height: 75px;
+}
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape ) {
+.nonmain {
+	padding-top: 50px;
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 6em;
+}
+svg #subtitle, svg #subtitle1 {
+	display: none;
+}
+section.intro {
+	background: url(images/mic750.jpg) no-repeat top center;
+}
+.headbar {
+	background: transparent url(images/logo75.png) no-repeat 0 0;
+	width: 67px;
+	height: 75px;
+}
+}
+svg #base {
+	fill: black;
+	-webkit-mask: url(#mask);
+	mask: url(#mask);
+}
+svg #base1 {
+	fill: black;
+	-webkit-mask: url(#mask1);
+	mask: url(#mask1);
+}
+svg:not(:root) {
+	overflow: hidden
+}
+img {
+	border: 0
+}
+ @charset "UTF-8";
+.animated {
+	-webkit-animation-duration: 1.1s;
+	animation-duration: 1.1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+@-webkit-keyframes fadeIn {
+0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+@keyframes fadeIn {
+0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-delay: 1.4s;
+	-moz-animation-delay: 1.4s;
+	-ms-animation-delay: 1.4s;
+	-o-animation-delay: 1.4s;
+	animation-delay: 1.4s
+}
+@-webkit-keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+transform:translateY(0)
+}
+}
+@keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+-ms-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+-ms-transform:translateY(0);
+transform:translateY(0)
+}
+}
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown
+}
+#menuheader {
+	width: 100%;
+	height: 70px;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	z-index: 99999!important;
+	position: fixed;
+	top: 0;
+	left: 0
+}
+#onairheader {
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	background: transparent;
+}
+.onairnow {
+	width: auto;
+	top: 20px;
+	text-align: center;
+	display: inline;
+	color: hsla(32,90%,70%,1.00);
+	z-index: 999999!important;
+}
+#header {
+	width: 90%;
+	height: 44px;
+	background: transparent;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	z-index: 999999!important;
+}
+#clockweather {
+	top: 45px;
+	right: 4%;
+	position: absolute;
+}
+.nav:hover, #clockweather:hover, .onairnow:hover {
+	background: hsla(0,0%,0%,0.68);
+	transition: all .35s linear;
+	-o-transition: all .35s linear;
+	-moz-transition: all .35s linear;
+	-webkit-transition: all .35s linear
+}
+.textwrap {
+	background: transparent;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0
+}
+h3.black, p.black {
+	color: black
+}
+#topcontrol {
+	z-index: 10000001!important
+}
+#topcontrol:hover {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-webkit-transition: .3s all ease-in;
+	-o-transition: .3s all ease-in;
+	-moz-transition: .3s all ease-in;
+	transition: .3s all ease-in
+}
+
+@media screen and (max-width:1024px) {
+.about-text {
+	position: inherit;
+}
+h3.black, p.black {
+	color: #c3c3c3;
+}
+}
+
+@media screen and (max-height:666px) {
+.about-text {
+	position: inherit;
+}
+h3.black, p.black {
+	color: #c3c3c3
+}
+}
+/* -------------------------------------------
+    CONTACT
+   ------------------------------------------- */
+.contact-container {
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+}
+.contact-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* -------------------------------------------
+    NEWS
+   ------------------------------------------- */
+#content {
+	width: 100%;
+	overflow: auto;
+}
+#mainContent {
+	/* Container for the blog post in individal blog view */
+
+	width: 71%;
+	float: left;
+	padding-right: 2%;
+	padding-top: 41px;
+}
+#mainContent .bannerimage {
+	/* Container for Image */
+	
+	width: 20%;
+	float: left;
+	overflow: auto;
+	padding-right: 2%;
+}
+#mainContent .bannerimage img {
+	/* Image */
+	
+	width: 100%;
+	background-color: rgba(208,207,207,1.00);
+	float: left;
+}
+#content #sidebar {
+	/* Sidebar*/
+
+	width: 19%;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+	margin-top: 150px;
+	padding-top: 32px;
+}
+#content #sidebar #adimage {
+	/* Container for Image in sidebar */
+
+	background-color: rgba(208,207,207,1.00);
+	margin-top: 46px;
+	float: none;
+	overflow: auto;
+}
+#sidebar #adimage img {
+	/* Image in sidebar */
+
+	width: 100%;
+	float: left;
+}
+#content #sidebar #adimage {
+	/* Image in sidebar */
+
+	width: 100%;
+	margin-top: 0px;
+	float: left;
+}
+nav ul li {
+	list-style-type: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+nav ul {
+	padding-left: 0%;
+}
+nav ul li a {
+	color: rgba(146,146,146,1.00);
+	text-decoration: none;
+}
+#content #mainContent .authorInfo {
+	/* Author info section */
+
+	background-color: #272727;
+}
+#content #mainContent .authorInfo h2, #content #mainContent .authorInfo p {
+	padding-left: 2%;
+	padding-top: 11px;
+}
+#content #mainContent .authorInfo p {
+	padding-left: 2%;
+	padding-top: 0px;
+	padding-bottom: 11px;
+	padding-right: 2%;
+}
+
+/* Tablet view */
+
+@media screen and (max-width:769px) {
+#mainContent {
+	/* Container for the blog post */
+
+	padding-top: 0px;
+	float: none;
+	width: 96%;
+}
+#content #sidebar {
+	/* Sidebar*/
+
+	float: none;
+	width: 92%;
+	padding-top: 13px;
+	overflow: auto;
+	margin-top: 3px;
+	margin-left: 2%;
+	padding-bottom: 13px;
+}
+#content #sidebar #adimage {
+	/* Image in sidebar */
+
+	width: 60%;
+	margin-top: 0px;
+	float: left;
+}
+#content #sidebar nav {
+	/* Navigation links in sidebar */
+
+	width: 36%;
+	float: left;
+	padding-left: 4%;
+}
+#sidebar nav ul {
+	margin-top: 0px;
+}
+}
+
+/* Mobile view */
+
+@media screen and (max-width:480px) {
+#content #sidebar #adimage {
+	/* Container for image in sidebar */
+
+	width: 80%;
+	float: none;
+}
+#content #sidebar nav {
+	/* Navigation bar for links in sidebar */
+
+	width: 96%;
+	padding-top: 7px;
+}
+#sidebar nav ul li {
+
+	text-align: left;
+}
+#content #sidebar {
+	/* sidebar */
+
+	padding-bottom: 0px;
+}
+#content #mainContent h3 {
+	/* Title under maincontent, if any */
+
+	font-size: 16px;
+}
+}
+/* -------------------------------------------
+    HTML5 PLAYER
+   ------------------------------------------- */
+
+#html5Player {
+	position: fixed;
+	background: none;
+	bottom: 0;
+	width: 100%;
+	z-index: 10000000;
+}
+#pButton {
+	height: 112px;
+	width: 590px;
+	border: none;
+}
+.play {
+	background: url(images/buttons.svg) -246px 0 no-repeat
+}
+.pause {
+	background: url(images/buttons.svg) 0 0 no-repeat
+}
+#Button-holder {
+	clear: both;
+	width: 112px;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+	top: -8px
+}
+/* -------------------------------------------
+    FLASH RADIO PLAYER
+   ------------------------------------------- */  
+#FlashPlayer {
+	position: relative;
+}
+#radio-player {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 10000000;
+}
+#radio-player-hide {
+	width: 1005px;
+	margin: 0px auto 0px auto;
+}
+.radio-player-open {
+	width: 50px;
+	height: 35px;
+	cursor: pointer;
+	margin-left: 1050px;
+}
+.radio-player-open-hidden {
+	width: 50px;
+	height: 35px;
+	cursor: pointer;
+	margin-left: 1050px;
+}
+.radio-player-hidden-open {
+	width: 50px;
+	height: 35px;
+}
+#radio-player-bar {
+	background: url("images/clubber.png");
+	width: 100%;
+	height: 30px;
+	text-decoration: none;
+}
+#radio-player #radio-player-col {
+	display: none
+}
+.radio-player-open {
+	background: url("images/hide02c0f8.png") 0 0 no-repeat;
+}
+.radio-player-open:hover {
+	background: url("images/hide02c0f8.png") -50px 0 no-repeat
+}
+.radio-player-open-hidden {
+	background: url("images/hide02c0f8.png") 0 -35px no-repeat;
+}
+.radio-player-open-hidden:hover {
+	background: url("images/hide02c0f8.png") -50px -35px no-repeat
+}
+.radio-player-hidden-open {
+	background: url("images/hide02c0f8.png") 0 0 no-repeat;
+}
+.radio-player-hidden-open:hover {
+	background: url("images/hide02c0f8.png") -50px 0 no-repeat
+}
+/* -------------------------------------------
+    CLOCK
+   ------------------------------------------- */
+#liveclock {
+	width: 80px;
+	height: 80px;
+}
+.outer_face {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid #fff
+}
+.outer_face::before, .outer_face::after, .outer_face .marker {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 100%;
+	background: transparent;
+	z-index: 0;
+	left: 50%;
+	margin-left: -5px;
+	top: 0
+}
+.outer_face::after {
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg)
+}
+.outer_face .marker {
+	background: #f00;
+	width: 8px;
+	margin-left: -4px
+}
+.outer_face .marker.oneseven {
+	-moz-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg)
+}
+.outer_face .marker.twoeight {
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-webkit-transform: rotate(60deg);
+	transform: rotate(60deg)
+}
+.outer_face .marker.fourten {
+	-moz-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	-webkit-transform: rotate(120deg);
+	transform: rotate(120deg)
+}
+.outer_face .marker.fiveeleven {
+	-moz-transform: rotate(150deg);
+	-ms-transform: rotate(150deg);
+	-webkit-transform: rotate(150deg);
+	transform: rotate(150deg)
+}
+.inner_face {
+	position: relative;
+	width: 88%;
+	height: 88%;
+	background: transparent;
+	-moz-border-radius: 1000px;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+	z-index: 1000;
+	left: 6%;
+	top: 6%
+}
+.inner_face::before {/* clock center circle small */
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin-left: -3px;
+	margin-top: -3px;
+	background: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.inner_face::after {
+	content: "Athens";
+	position: absolute;
+	width: 100%;
+	font: normal 0.6em Arial;
+	color: transparent;
+	text-align: center;
+	top: 82%
+}
+.hand, .hand.hour {
+	position: absolute;
+	width: 1px;
+	height: 30%;
+	top: 20%;
+	left: 50%;
+	margin-left: -1px;
+	background: #fff;
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-moz-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	transform-origin: bottom;
+	z-index: -1;
+}
+.hand.minute {
+	height: 45%;
+	top: 5%;
+	width: 1px;
+	margin-left: -1px;
+}
+.hand.second {
+	height: 50%;
+	width: 2px;
+	margin-left: -1px;
+	top: 0;
+	background: red
+}
+.marker {
+	padding: 0;
+	margin: 0;
+	width: 50px;
+	height: 70px;
+	display: block;
+	clear: both;
+	background: transparent;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	z-index: 998;
+	display: none
+}
+button {
+	background: transparent;
+	color: blue;
+	border: 0;
+	border-radius: 5px;
+}
+button:hover, a:hover {
+	color: #ea9312;
+}
+/*================================
+FOOTER SECTION
+================================*/
+@font-face {
+	font-family: 'Simple-Line-Icons';
+	src: url('fonts/Simple-Line-Icons.eot');
+	src: url('fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'), url('fonts/Simple-Line-Icons.woff') format('woff'), url('fonts/Simple-Line-Icons.ttf') format('truetype'), url('fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-speedometer, .icon-social-youtube, .icon-social-twitter, .icon-social-tumblr, .icon-social-facebook, .icon-social-dropbox, .icon-social-dribbble {
+	font-family: 'Simple-Line-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-speedometer:before {
+	content: "\e007";
+	font-size: xx-large
+}
+.icon-social-youtube:before {
+	content: "\e008";
+}
+.icon-social-twitter:before {
+	content: "\e009";
+}
+.icon-social-tumblr:before {
+	content: "\e00a";
+}
+.icon-social-facebook:before {
+	content: "\e00b";
+}
+.icon-social-dropbox:before {
+	content: "\e00c";
+}
+.icon-social-dribbble:before {
+	content: "\e00d";
+}
+footer {
+	text-align: center;
+	padding: 50px 0;
+	background: #525252;
+	width: 100%;
+	z-index: 10000;
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 140px;
+}
+footer p, footer .bigicon {
+	color: #7e7e7e;
+}
+footer a:hover {
+	color: #ea9312;
+}
+.footerlinks {
+	margin: 30px 0;
+}
+.footerlinks li {
+	display: inline;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footersocial {
+	margin-top: 30px;
+}
+.footersocial li {
+	display: inline;
+	padding: 0 15px;
+	font-size: 2em;
+}
+.footersocial li a {
+	color: #7e7e7e;
+}
+.footersocial li a:hover {
+	color: #ea9312;
+}
+</style>
+</head>
+
+<body>
+
+<!--ECHORADIO TEXT-->
+<div class="text animated fadeInDown">
+  <svg>
+    <defs>
+      <mask id="mask" x="0" y="0" width="100%" height="100%">
+        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+        <text id="title" x="48%" y="1%" dy="1.58em">EchoRadio</text>
+        <text id="subtitle" x="50%" y="28%" dy="9.8em">The Soundtrack of Our Lives</text>
+      </mask>
+    </defs>
+    <rect id="base" x="0" y="0" width="100%" height="100%" />
+  </svg>
+</div>
+
+<!--BACKGROUND-->
+
+<section id="home" class="intro animated fadeIn"></section>
+
+<!--RADIO PLAYERS-->
+<div id="FlashPlayer">
+  <div id="radio-player">
+    <div id="radio-player-hide">
+      <div class="radio-player-open-hidden"></div>
+    </div>
+    <div id="radio-player-col" style="display: block;">
+      <div id="radio-player-bar" align="center">
+        <div id="Fplayer">
+        	<audio controls autoplay>
+        		<source src="http://proradio.gr:8004/ecog" type="audio/aac">
+  				<source src="http://proradio.gr:8004/ecogg" type="audio/ogg">
+  				<source src="http://proradio.gr:8004/ecogm" type="audio/mpeg">
+ 			</audio>
+     	</div>
+		<hr>
+		<br>
+    </div>
+  </div>
+</div>
+<div id ="html5Player" align="center">
+  <p id="stream_status" align="center"></p>
+  <div id="phone">
+    <div id="aac">
+      <audio id="radio" autoplay onPlay="pButton.className = 'pause'">
+        <source src="http://proradio.gr:8004/ecog" type="audio/aac">
+        <source src="http://proradio.gr:8004/ecogg" type="audio/ogg">
+        <source src="http://proradio.gr:8004/ecogm" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- Fix for Xperia -->
+    <div id="ogg">
+      <audio id="Xperia" autoplay onPlay="pButton.className = 'pause'">
+        <source src="http://proradio.gr:8004/ecogg" type="audio/ogg">
+        <source src="http://proradio.gr:8004/ecogm" type="audio/mpeg">
+      </audio>
+    </div>
+    <div id="Button-holder">
+      <button id="pButton" class="play" onclick="playAudio()"></button>
+    </div>
+  </div>
+</div>
+
+<!--MENU-->
+<div id="menuheader" class="animated fadeIn"> 
+  <!--ONAIRNOW-->
+  <div id="onairheader">
+    <h2 id="metadata" class="onairnow"> </h2>
+  </div>
+  <div id="header"> 
+    <!--LOGO-->
+    <div class="headbar">
+      <h1><a href="#home">EchoRadio | The Soundtrack of Our Lives</a></h1>
+    </div>
+     <ul class="nav nav-pills">
+      <li class="nav-item"> <a class="nav-link" href="#onair">OnAir</a></li>
+      <li class="nav-item"> <a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"> <a class="nav-link" href="#news">News</a></li>
+    </ul>
+  </div>
+  
+  <!--CLOCK-->
+  <div align="center" id="clockweather">
+    <div id="liveclock" class="outer_face">
+      <div class="marker oneseven"></div>
+      <div class="marker twoeight"></div>
+      <div class="marker fourten"></div>
+      <div class="marker fiveeleven"></div>
+      <div class="inner_face">
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--ONAIR-->
+<div id="onair" class="nonmain tab-pane">
+  <h1>on air</h1>
+  <hr />
+  <iframe src="playing.html" width="100%" height="600px" frameborder="0" seamless>
+  <div align="center" onLoad="Pop_up_playing()">To see what's playing now, please allow Pop-Ups</div>
+  </iframe>
+  <hr />
+  &nbsp; </div>
+<!--ABOUT-->
+<div id="about" class="nonmain tab-pane">
+  <h1>about</h1>
+  <hr />
+  <div class="about-text">
+    <h3 class="black"> Old stories and new Glories... </h3>
+    <div>
+      <p class="black">Spanning over 8 decades and almost every popular genre, EchoRadio’s music is the Soundtrack of Our Lives. It is the music we all grew up with, the music we listen to every day, the music we live with and live for (at least here at EchoRadio). </p>
+      <p class="black">It all started by chance. A friend asked how he could possibly start a web radio station. Being a pioneer in both web radio and radio automation, I replied “it is quite easy”! (I created my first web radio 21 years ago, – and it is still streaming 24/7 and has been for 21 consecutive years. I wrote my first radio automation software 25 years ago. I had my first FM Radio Show 40 years ago!)</p>
+      <p class="black">So, to show my friend how easy it is, I quickly put together a new Web Radio. It took me a couple of hours to get it up and running, (with a little help from my friends) and a couple of months to fine tune it! Well, it started as a challenge, just to prove how easy it is to start an Internet Radio Station, but little by little and step by step, this little game became an obsession. This obsession created EchoRadio.</p>
+      <p class="black">EchoRadio aspires to be the Soundtrack of Our Lives. To be with us 24/7 playing pleasent, good quality music. Simple as that.</p>
+      <p class="black">EchoRadio is not 100% ready yet. And it never will be – there is always room for improvement. Our immediate plans include the implementation of your feedback and your song requests mechanism, a link with the artist’s biography and information about the song playing and of course plenty of improvements regarding the EchoRadio’s programme, news, repertoire and web-site.</p>
+      <p class="black">So stay tuned, a lot of nice things are about to happen.</p>
+    </div>
+  </div>
+  <div align="center" style="background-color: #A3A3A3">
+  <img src="images/musicrock1920.jpg" alt="bw photo of rock instuments" class="img-responsive">
+  </div>
+  <hr />
+  
+  <!--CONTACT-->
+  <h1>contact</h1>
+  <div class="textwrap">
+    <p> Please, feel free to drop us an e-mail at <a href="mailto:info@echoradio.de">this address</a> and tell us your opinion about EchoRadio, your suggestions, your ideas, and anything else you might like to talk about.</p>
+  <!--   <p> Alternatively, just click
+      <button id="Contact_button">here</button>
+      and fill in the form that appears.</p> -->
+  </div>
+ <!-- <div id="Contact_form">
+    <button id="Contact_hide" class="textwrap">Hide Form</button>
+    <div class="contact-container">
+      <iframe src="http://hook.gr/wordpress/contact-3/" width="695px" height="521px" frameborder="0" scrolling="no" seamless></iframe>
+    </div>
+  </div> -->
+  <!--FOLLOW-->
+  <h1>follow</h1>
+  <div class="textwrap"> <a id="twitter" href="https://twitter.com/echotwitts" target="_blank"><img width="20" height="20" alt="Follow us on Twitter" src="images/twitter.png"></a> <a id="facebook" href="https://www.facebook.com/echoradios" target="_blank"><img width="20" height="20" alt="Follow us on Facebook" src="images/facebook.png"></a>
+    <iframe src="http://tunein.com/embed/follow/s265861/" style="width:78px;height:22px;"  scrolling="no" frameborder="no"></iframe>
+  </div>
+  
+    <!--INTERNET-RADIO-->
+  <h1>Listed on <a href="http://www.internet-radio.com" target="_blank"><img src="images/internet-radio-badge.gif" width="78" height="15" alt=""/></a></h1>
+  
+  <!--TUNEIN-->
+  <h1>Listen on TuneIn</h1>
+  <div class="textwrap">
+    <iframe src="http://tunein.com/embed/player/s265861/?background=dark" style="width:100%; height:100px;" scrolling="no" frameborder="no"></iframe>
+  </div>
+  <!--APPS-->
+  <h1>Listen via App</h1>
+  <div class="textwrap">
+    <p>To listen to EchoRadio via your favorite App, click on the App's icon:</p>
+    <figure><a href="echoradio.pls"><img src="images/ITunes12small.png" width="96" height="96"  alt="play with iTunes" /></a>
+      <figcaption>i Tunes</figcaption>
+    </figure>
+    <figure><a href="echoradio.pls"><img src="images/VLC_Icon.svg" width="96" height="96" alt="play with VLC player" /></a>
+      <figcaption>VLC Player</figcaption>
+    </figure>
+    <figure><a href="echoradio.pls" target="_self"><img src="images/Winamp.png" width="96" height="96" alt="play with Winamp" /></a>
+      <figcaption>Win-amp</figcaption>
+    </figure>
+    <figure><a href="echoradio.ram"><img src="images/RealPlayer-Logo.png" width="96" height="96" alt="play with Real Player" /></a>
+      <figcaption>Real Player</figcaption>
+    </figure>
+    <figure><a href="echoradio.asx"><img src="images/Windows-Media-Player-12-icon.png" width="96" height="96" alt="play with Windows Media Player" /></a>
+      <figcaption>Windows Media Player</figcaption>
+    </figure>
+    <div class="clear">&nbsp;</div>
+    <p>...and you will receive a small file containing all the settings necessary for your App. Just open this file with your App and you will start listening to EchoRadio.</p>
+  </div>
+  <!--POWERED BY-->
+  <h1>powered by </h1>
+  <div class="textwrap"> <a href="http://easyradio.gr/" target="_blank"><img src="images/ER-logo.gif" width="176" height="67" alt="Easy Radio" /></a> </div>
+</div>
+<!--NEWS-->
+<div id="news" class="nonmain tab-pane">
+  <h1>news</h1>
+  <hr />
+  <div class="textwrap">
+    <div id="content">
+         <section id="mainContent">
+          <div class="bannerimage"><img src="images/logo3.jpg" alt="logo"/></div>
+          <div>
+            <h2>New Logo</h2>
+            <h3>IN THE STYLE OF THE 1920s</h3>
+          </div>
+          <div class="clear"></div>
+          <p>We changed our logo! Our new logo is a tribute to the very early days of radio, almost a century ago!</p>
+          <aside class="authorInfo" id="n1">
+            <h2>EchoRadio</h2>
+            <p>May 2016</p>
+          </aside>
+          <div class="bannerimage"><img src="images/play.png" alt="play button"/></div>
+          <div>
+            <h2>New Super Fast Radio Player</h2>
+            <h3>PLAYS ON ALL SMARTPHONES</h3>
+          </div>
+          <div class="clear"></div>
+          <p>Now EchoRadio uses our new home made player for mobile devices. It is extra fast, (no more long waiting until it starts playing) and plays on all smartphones and tablets.<br>
+            So, next time you visit echoradio.de on your mobile, just press the play button and EchoRadio will start playing at once!<br>
+            Give it a try, and tell us about it…. </p>
+          <aside class="authorInfo">
+            <h2>EchoRadio</h2>
+            <p>May 2016</p>
+          </aside>
+      </section>
+      <section id="sidebar">
+        <div id="adimage"><img src="images/logo4.jpg" alt=""/></div>
+        <nav>
+          <ul>
+            <li><a href="#news" title="Link">New Logo</a></li>
+            <li><a href="#n1" title="Link">New Super Fast Radio Player</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="container"> <span class="bigicon icon-speedometer "></span>
+    <div class="footerlinks"> 
+      <!-- FOOTER LINKS START -->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#onair">On Air</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:info@echoradio.co">Contact</a></li>
+        <li><a href="#news">News</a></li>
+      </ul>
+    </div>
+    <!-- FOOTER LINKS END -->
+    
+    <div class="copyright"> 
+      <!-- FOOTER COPYRIGHT START -->
+      <p align="center">Copyright &copy; 2022 &middot; All Rights Reserved &middot; <a href="http://echoradio.de/" >Echoradio</a></p>
+    </div>
+    <!-- FOOTER COPYRIGHT END -->
+    
+    <div class="footersocial wow fadeInUp" data-wow-duration="3s"> 
+      <!-- FOOTER SOCIAL ICONS START -->
+      <ul>
+        <li><a href="http://facebook.com/echoradios"><span class="icon-social-facebook"></span></a></li>
+        <li><a href="http://twitter.com/echotwitts"><span class="icon-social-twitter"></span></a></li>
+        <li><a href="#"><span class="icon-social-youtube"></span></a></li>
+        <li><a href="http://echoradio.de"><span class="icon-social-dribbble"></span></a></li>
+        <li><a href="#"><span class="icon-social-tumblr"></span></a></li>
+      </ul>
+    </div>
+    <!-- FOOTER SOCIAL ICONS END --> 
+  </div>
+</footer>
+
+<!-- FOOTER END --> 
+
+<!--CLOCK SCRIPT--> 
+<script type="text/javascript">
+var $hands = $('#liveclock div.hand')
+window.requestAnimationFrame = window.requestAnimationFrame
+                               || window.mozRequestAnimationFrame
+                               || window.webkitRequestAnimationFrame
+                               || window.msRequestAnimationFrame
+                               || function(f){setTimeout(f, 60)}
+function updateclock(){
+	var curdate = new Date()
+	var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360
+	var minute_as_degree = curdate.getMinutes() / 60 * 360
+	var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360
+	$hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' })
+	$hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' })
+	$hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' })
+	requestAnimationFrame(updateclock)
+}
+requestAnimationFrame(updateclock)</script> 
+
+<!--SCROLL TO TOP SCRIPT--> 
+<script type="text/javascript">
+/*<![CDATA[*/
+var scrolltotop={
+	setting: {startline:100, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
+	controlHTML: '<img src="images/up.png" style="filter:alpha(opacity=70); -moz-opacity:0.7;" width="43" height="31"/>', 
+	controlattrs: {offsetx:0, offsety:40}, 
+	anchorkeyword: '#home', 
+	state: {isvisible:false, shouldvisible:false},
+	scrollup:function(){
+		if (!this.cssfixedsupport) 
+			this.$control.css({opacity:0}) 
+		var dest=isNaN(this.setting.scrollto)? this.setting.scrollto : parseInt(this.setting.scrollto)
+		if (typeof dest=="string" && jQuery('#'+dest).length==1) 
+			dest=jQuery('#'+dest).offset().top
+		else
+			dest=0
+		this.$body.animate({scrollTop: dest}, this.setting.scrollduration);
+	},
+	keepfixed:function(){
+		var $window=jQuery(window)
+		var controlx=$window.scrollLeft() + $window.width() - this.$control.width() - this.controlattrs.offsetx
+		var controly=$window.scrollTop() + $window.height() - this.$control.height() - this.controlattrs.offsety
+		this.$control.css({left:controlx+'px', top:controly+'px'})
+	},
+	togglecontrol:function(){
+		var scrolltop=jQuery(window).scrollTop()
+		if (!this.cssfixedsupport)
+			this.keepfixed()
+		this.state.shouldvisible=(scrolltop>=this.setting.startline)? true : false
+		if (this.state.shouldvisible && !this.state.isvisible){
+			this.$control.stop().animate({opacity:1}, this.setting.fadeduration[0])
+			this.state.isvisible=true
+		}
+		else if (this.state.shouldvisible==false && this.state.isvisible){
+			this.$control.stop().animate({opacity:0}, this.setting.fadeduration[1])
+			this.state.isvisible=false
+		}
+	},	
+	init:function(){
+		jQuery(document).ready(function($){
+			var mainobj=scrolltotop
+			var iebrws=document.all
+			mainobj.cssfixedsupport=!iebrws || iebrws && document.compatMode=="CSS1Compat" && window.XMLHttpRequest 
+			mainobj.$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+			mainobj.$control=$('<div id="topcontrol">'+mainobj.controlHTML+'</div>')
+				.css({position:mainobj.cssfixedsupport? 'fixed' : 'absolute', bottom:mainobj.controlattrs.offsety, right:mainobj.controlattrs.offsetx, opacity:0, cursor:'pointer'})
+				.attr({title:'back to top'})
+				.click(function(){mainobj.scrollup(); return false})
+				.appendTo('body')
+			if (document.all && !window.XMLHttpRequest && mainobj.$control.text()!='') 
+				mainobj.$control.css({width:mainobj.$control.width()}) 
+			mainobj.togglecontrol()
+			$('a[href="' + mainobj.anchorkeyword +'"]').click(function(){
+				mainobj.scrollup()
+				return false
+			})
+			$(window).bind('scroll resize', function(e){
+				mainobj.togglecontrol()
+			})
+		})
+	}
+}
+scrolltotop.init()/*]]>*/</script> 
+
+<!--FLASH RADIO PLAYER--> 
+<script type="text/javascript" src="js/aac.js"></script> 
+<script type="text/javascript">
+    // SET THE FOLLOWING VARIABLES ACCORDING TO YOUR STREAM
+     var stream = "http://proradio.gr:8004/ecog";
+     var autostart = "true";
+    // DO NOT EDIT ANYTHING BELOW THIS POINT
+     var so = new SWFObject("js/aac_player.swf","mpl","180","20","9");
+     so.addParam("allowscriptaccess","always");
+     so.addParam("allowfullscreen","false");
+     so.addVariable("autostart", autostart);
+     so.addVariable("file", stream+"%3Ftype%3D.flv");
+     so.write("Fplayer");
+</script> 
+
+<!--HTML RADIO PLAYER--> 
+<script type = "text/javascript">
+radio.addEventListener("loadstart", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Play';
+},false);
+
+radio.addEventListener("stalled", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Buffering...';
+setTimeout(Playing, 30000);
+function Playing() {
+   todoItems.innerHTML = 'Playing...';
+}
+},false);
+
+radio.addEventListener("playing", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Playing...';
+},false);
+
+radio.addEventListener("pause", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Paused...';
+},false);
+</script> 
+<script type="text/javascript"> 	
+var music = document.getElementById('radio'); 
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause";	
+	} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+} 
+</script> 
+
+<!--HTML Xperia PLAYER for XPERIA--> 
+<script type = "text/javascript">
+Xperia.addEventListener("loadstart", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Play';
+},false);
+
+Xperia.addEventListener("stalled", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Buffering...';
+setTimeout(Playing, 30000);
+function Playing() {
+   todoItems.innerHTML = 'Playing...';
+}
+},false);
+
+Xperia.addEventListener("playing", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Playing...';
+},false);
+
+Xperia.addEventListener("pause", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Paused...';
+},false);
+</script> 
+<script type="text/javascript"> 	
+var music = document.getElementById('Xperia'); 
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause";	
+	} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+} 
+</script> 
+<!--GOOGLE ANALYTICS
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68444567-1', 'auto');
+  ga('send', 'pageview');
+
+</script> --> 
+</body>
+</html>

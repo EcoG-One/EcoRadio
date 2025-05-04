@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EchoRadio for Mobile</title>
+<meta name="description" content="Spanning over 8 decades and almost every popular genre, EchoRadio’s music is the Soundtrack of Our Lives.">
+<meta name="author" content="EcoG">
+<meta property="og:title" loaded="no" content="EchoRadio">
+<meta property="og:type" loaded="no" content="music.radio_station">
+<meta property="og:url" loaded="no" content="http://echoradio.de">
+<meta property="og:site_name" loaded="no" content="EchoRadio">
+<meta property="og:description" loaded="no" content="The Soundtrack of Our Lives">
+<meta property="og:image" loaded="no" content="images/logo.png">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+<script type="text/javascript" src="js/jquery.js?ver=1.11.3"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js?ver=1.2.1"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+	
+/* On Scroll Create Black Bar and remove it on home page*/
+$('#clockweather').hide();	
+$(document).scroll(function(){
+   $("#menuheader").css("background", "black");
+    $('.text').hide(); 
+	$('#clockweather').show();
+  if ($(document).scrollTop() == 0) {
+	  $('.text').show(); 
+	  $('#clockweather').hide();
+   $("#menuheader").css("background", "transparent")}; 	
+}); 	
+	
+/*HIDE OR SHOW CONTACT FORM */
+$("#Contact_form").hide();
+$("#Contact_button").click(function(){
+    $("#Contact_form").show();
+})
+$("#Contact_hide").click(function(){
+    $("#Contact_form").hide();
+});
+});
+	</script>
+	
+<style type="text/css">
+	@font-face {
+	font-family: 'Harlow-Solid-Italic';
+	src: url('fonts/Harlow-Solid-Italic.ttf.woff') format('woff'),  url('fonts/Harlow-Solid-Italic.ttf.svg#Harlow-Solid-Italic') format('svg'),  url('fonts/Harlow-Solid-Italic.ttf.eot'),  url('fonts/Harlow-Solid-Italic.ttf.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('fonts/opensans-light-webfont.eot');
+	src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-light-webfont.woff2') format('woff2'), url('fonts/opensans-light-webfont.woff') format('woff'), url('fonts/opensans-light-webfont.ttf') format('truetype'), url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	-ms-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100% -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+ box-sizing: border-box -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+}
+html, body {
+	height: 100%;
+}
+body {
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.text {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+	.center, .aligncenter {
+	text-align: center;
+	display: block;
+	margin: 10px auto!important;
+	padding: 8px
+}
+.clear {
+	clear: both
+}
+.main {
+	width: 100%;
+	z-index: 0;
+}
+svg {
+	width: 100%;
+	height: inherit;
+}
+svg text {
+	text-anchor: middle;
+}
+svg #alpha, svg #alpha1 {
+	fill: #b3b3b3;
+}
+svg #title, svg #title1 {
+	letter-spacing: -10px;
+	font-size: 12em;
+	font-weight: normal;
+	font-family: 'Harlow-Solid-Italic', arial, sans-serif;
+}
+svg #subtitle, svg #subtitle1 {
+	letter-spacing: 9.5px;
+	font-size: 1.2em;
+	font-weight: 100;
+	font-family: 'Open Sans', arial, sans-serif;
+	text-transform: uppercase;
+}
+section.intro {
+	background: url(images/mic1920.jpg) no-repeat top center;
+	background-size: 100%;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}	
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown
+}
+	.nav {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	font: 100 18px 'open_sanslight', Roboto, helvetica, arial, futura lt medium, trebuchet ms, verdana, tahoma, sans-serif;
+	color: #DDC9A7;
+	float: right;
+}
+.nav > li > a {
+	text-decoration: none;
+	color: #FF3838
+}
+.nonmain {
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 10;
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	position: relative;
+	background: url(images/irongrip.png);
+}
+@media screen and (max-width:768px) and (orientation: portrait) {
+section.intro {
+	background: url(images/mic768.jpg) no-repeat top center;
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 10em;
+}
+svg #subtitle, svg #subtitle1 {
+	letter-spacing: 2px;
+}
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 5em;
+}
+svg #subtitle, svg #subtitle1 {
+	display: none;
+}
+section.intro {
+	background: url(images/mic480.jpg) no-repeat top center;
+}
+.headbar {
+	background: transparent url(images/logo75.png) no-repeat 0 0;
+	width: 67px;
+	height: 75px;
+}
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape ) {
+.nonmain {
+	padding-top: 50px;
+}
+svg #title, svg #title1 {
+	letter-spacing: -7px;
+	font-size: 6em;
+}
+svg #subtitle, svg #subtitle1 {
+	display: none;
+}
+section.intro {
+	background: url(images/mic750.jpg) no-repeat top center;
+}
+.headbar {
+	background: transparent url(images/logo75.png) no-repeat 0 0;
+	width: 67px;
+	height: 75px;
+}
+}
+svg #base {
+	fill: black;
+	-webkit-mask: url(#mask);
+	mask: url(#mask);
+}
+svg #base1 {
+	fill: black;
+	-webkit-mask: url(#mask1);
+	mask: url(#mask1);
+}
+svg:not(:root) {
+	overflow: hidden
+}
+img {
+	border: 0
+}
+ @charset "UTF-8";
+.animated {
+	-webkit-animation-duration: 1.1s;
+	animation-duration: 1.1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+@-webkit-keyframes fadeIn {
+0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+@keyframes fadeIn {
+0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-delay: 1.4s;
+	-moz-animation-delay: 1.4s;
+	-ms-animation-delay: 1.4s;
+	-o-animation-delay: 1.4s;
+	animation-delay: 1.4s
+}
+@-webkit-keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+transform:translateY(0)
+}
+}
+@keyframes fadeInDown {
+0% {
+opacity:0;
+-webkit-transform:translateY(-20px);
+-ms-transform:translateY(-20px);
+transform:translateY(-20px)
+}
+100% {
+opacity:1;
+-webkit-transform:translateY(0);
+-ms-transform:translateY(0);
+transform:translateY(0)
+}
+}
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown
+}
+/* -------------------------------------------
+    HTML5 PLAYER
+   ------------------------------------------- */
+
+#html5Player {
+	position: fixed;
+	background: none;
+	bottom: 0;
+	width: 100%;
+	z-index: 100!important;
+}
+#pButton {
+	height: 112px;
+	width: 590px;
+	border: none;
+}
+.play {
+	background: url(images/buttons.svg) -241px 0 no-repeat
+}
+.pause {
+	background: url(images/buttons.svg) 0 0 no-repeat
+}
+#Button-holder {
+	clear: both;
+	width: 112px;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+	top: -8px
+}
+#menuheader {
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	z-index: 100!important;
+	position: fixed;
+	top: 0;
+	right: 0
+}
+#onairheader {
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	background: transparent;
+}	
+	.nav:hover {
+	background: hsla(0,0%,0%,0.68);
+	transition: all .35s linear;
+	-o-transition: all .35s linear;
+	-moz-transition: all .35s linear;
+	-webkit-transition: all .35s linear
+}
+.h_iframe iframe {width:100%; height:100%;}
+.h_iframe {
+    height: 100%;
+}
+div.app {
+  width: 100px;
+  float: left;
+  margin-bottom: 25px;
+}
+
+div.appcaption {
+  text-align: center;
+  padding: 10px 20px;
+}
+	* -------------------------------------------
+    NEWS
+   ------------------------------------------- */
+#content {
+	width: 100%;
+	overflow: auto;
+}
+#mainContent .bannerimage {
+	/* Container for Image */	
+	width: 100%;
+	float: left;
+	overflow: auto;
+	padding-right: 2%;
+}
+#mainContent .bannerimage img {
+	/* Image */	
+	max-width: 50%; 
+	height: auto; 
+	display:block;
+	background-color: rgba(208,207,207,1.00);
+	float: left;
+}
+/*================================
+FOOTER SECTION
+================================*/
+@font-face {
+	font-family: 'Simple-Line-Icons';
+	src: url('fonts/Simple-Line-Icons.eot');
+	src: url('fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'), url('fonts/Simple-Line-Icons.woff') format('woff'), url('fonts/Simple-Line-Icons.ttf') format('truetype'), url('fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-speedometer, .icon-social-youtube, .icon-social-twitter, .icon-social-tumblr, .icon-social-facebook, .icon-social-dropbox, .icon-social-dribbble {
+	font-family: 'Simple-Line-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-speedometer:before {
+	content: "\e007";
+	font-size: xx-large
+}
+.icon-social-youtube:before {
+	content: "\e008";
+}
+.icon-social-twitter:before {
+	content: "\e009";
+}
+.icon-social-tumblr:before {
+	content: "\e00a";
+}
+.icon-social-facebook:before {
+	content: "\e00b";
+}
+.icon-social-dropbox:before {
+	content: "\e00c";
+}
+.icon-social-dribbble:before {
+	content: "\e00d";
+}
+footer {
+	text-align: center;
+	padding: 50px 0;
+	background: #525252;
+	width: 100%;
+	z-index: 10000;
+	color: #fafafa;
+	font: normal 16px/25px 'open_sanslight', arial, Roboto, trebuchet ms, tahoma, verdana, sans-serif;
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 140px;
+}
+footer p, footer .bigicon {
+	color: #7e7e7e;
+}
+footer a:hover {
+	color: #ea9312;
+}
+.footerlinks {
+	margin: 30px 0;
+}
+.footerlinks li {
+	display: inline;
+	padding: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footersocial {
+	margin-top: 30px;
+}
+.footersocial li {
+	display: inline;
+	padding: 0 15px;
+	font-size: 2em;
+}
+.footersocial li a {
+	color: #7e7e7e;
+}
+.footersocial li a:hover {
+	color: #ea9312;
+}	
+</style>
+</head>
+
+<body>
+<!--ECHORADIO TEXT-->
+<div class="text animated fadeInDown">
+  <svg>
+    <defs>
+      <mask id="mask" x="0" y="0" width="100%" height="100%">
+        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+        <text id="title" x="48%" y="1%" dy="1.58em">EchoRadio</text>
+        <text id="subtitle" x="50%" y="20%" dy="9.8em">The Soundtrack of Our Lives</text>
+      </mask>
+    </defs>
+    <rect id="base" x="0" y="0" width="100%" height="100%" />
+  </svg>
+</div>
+
+<!--BACKGROUND-->
+<section id="home" class="intro animated fadeIn"></section>
+
+<!--RADIOPLAYER-->
+<div id ="html5Player" align="center">
+  <p id="stream_status" align="center"></p>
+      <audio id="radio" autoplay onPlay="pButton.className = 'pause'">   
+        <source src="http://proradio.gr:8004/ecogg" type="audio/ogg">
+        <source src="http://proradio.gr:8004/ecog" type="audio/aac">
+      </audio>
+    <div id="Button-holder">
+      <button id="pButton" class="play" onclick="playAudio()"></button>
+    </div>
+</div>
+
+<!--MENU-->
+<div id="menuheader" class="animated fadeIn"> 
+  
+  <div>
+     <ul class="nav nav-pills">
+      <li class="nav-item"> <a class="nav-link" href="#onair">OnAir</a></li>
+      <li class="nav-item"> <a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"> <a class="nav-link" href="#news">News</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--ONAIR-->
+<div id="onair" class="nonmain tab-pane">
+  <h3>on air</h3>
+  <iframe src="playing.html" width="100%" height="700px" scrolling="no" frameborder="0" seamless>
+  <div align="center" onLoad="Pop_up_playing()">To see what's playing now, please allow Pop-Ups</div>
+  </iframe>
+</div>
+  
+<!--ABOUT-->
+<div id="about" class="nonmain tab-pane">
+  <h3>about</h3>
+  <div class="about-text">
+    <h3 class="black"> Old stories and new Glories... </h3>
+    <div>
+      <p class="black">Spanning over 8 decades and almost every popular genre, EchoRadio’s music is the Soundtrack of Our Lives. It is the music we all grew up with, the music we listen to every day, the music we live with and live for (at least here at EchoRadio). </p>
+      <p class="black">It all started by chance. A friend asked how he could possibly start a web radio station. Being a pioneer in both web radio and radio automation, I replied “it is quite easy”! (I created my first web radio 21 years ago, – and it is still streaming 24/7 and has been for 21 consecutive years. I wrote my first radio automation software 25 years ago. I had my first FM Radio Show 40 years ago!)</p>
+      <p class="black">So, to show my friend how easy it is, I quickly put together a new Web Radio. It took me a couple of hours to get it up and running, (with a little help from my friends) and a couple of months to fine tune it! Well, it started as a challenge, just to prove how easy it is to start an Internet Radio Station, but little by little and step by step, this little game became an obsession. This obsession created EchoRadio.</p>
+      <p class="black">EchoRadio aspires to be the Soundtrack of Our Lives. To be with us 24/7 playing pleasent, good quality music. Simple as that.</p>
+      <p class="black">EchoRadio is not 100% ready yet. And it never will be – there is always room for improvement. Our immediate plans include the implementation of your feedback and your song requests mechanism, a link with the artist’s biography and information about the song playing and of course plenty of improvements regarding the EchoRadio’s programme, news, repertoire and web-site.</p>
+      <p class="black">So stay tuned, a lot of nice things are about to happen.</p>
+    </div>
+  </div>
+ <!-- <div align="center" style="background-color: #A3A3A3">
+  <img src="images/musicrock1920.jpg" alt="bw photo of rock instuments" class="img-responsive">
+  </div>-->
+  <hr />
+  
+  <!--CONTACT-->
+  <h3>contact</h3>
+  <div class="textwrap">
+    <p> Please, feel free to drop us an e-mail at <a href="mailto:info@echoradio.de">info@echoradio.de</a> and tell us your opinion about EchoRadio, your suggestions, your ideas, and anything else you might like to talk about.</p>
+  <!-- <p> Alternatively, just click
+      <button id="Contact_button">here</button>
+      and fill in the form that appears.</p> -->
+  </div>
+ <!-- <div id="Contact_form">
+    <button id="Contact_hide" class="textwrap">Hide Form</button>
+    <div class="h_iframe">
+      <iframe src="http://hook.gr/wordpress/contact-3/" height="521px" frameborder="0" allowfullscreen seamless></iframe>
+    </div>
+  </div>-->
+  
+  <!--FOLLOW-->
+  <h3>social</h3>
+  <div class="textwrap"> 
+   <a id="twitter" href="https://twitter.com/echotwitts" target="_blank"><img width="20" height="20" alt="Follow us on Twitter" src="images/twitter.png"></a> 
+   <a id="facebook" href="https://www.facebook.com/echoradios" target="_blank"><img width="20" height="20" alt="Follow us on Facebook" src="images/facebook.png"></a>
+    <iframe src="http://tunein.com/embed/follow/s265861/" style="width: 78px; height: 22px" scrolling="no" frameborder="no"></iframe>
+  </div>
+  
+    <!--INTERNET-RADIO-->
+  Listed on <a href="http://www.internet-radio.com" target="_blank"><img src="images/internet-radio-badge.gif" width="78" height="15" alt=""/></a>
+ <br>
+  <!--TUNEIN-->
+  Listen on TuneIn
+  <div class="textwrap">
+    <iframe src="http://tunein.com/embed/player/s265861/?background=dark" style="width: 100%; height: 100px; display: block" scrolling="no" frameborder="no"></iframe>
+  </div>
+  <!--APPS-->
+  <h3>Listen via App</h3>
+   <div class="textwrap">
+    <p>To listen to EchoRadio via your favorite App, click on the App's icon:</p>
+    <div class="app"><a href="echoradio.pls"><img src="images/ITunes12small.png" width="96" height="96"  alt="play with iTunes" /></a>
+      <div class="appcaption">i Tunes</div>
+    </div>
+    <div class="app"><a href="echoradio.pls"><img src="images/VLC_Icon.svg" width="96" height="96" alt="play with VLC player" /></a>
+      <div class="appcaption">VLC Player</div>
+    </div>
+    <div class="app"><a href="echoradio.pls" target="_self"><img src="images/Winamp.png" width="96" height="96" alt="play with Winamp" /></a>
+      <div class="appcaption">Win-amp</div>
+    </div>
+    <div class="app"><a href="echoradio.ram"><img src="images/RealPlayer-Logo.png" width="96" height="96" alt="play with Real Player" /></a>
+      <div class="appcaption">Real Player</div>
+    </div>
+    <div class="app"><a href="echoradio.asx"><img src="images/Windows-Media-Player-12-icon.png" width="96" height="96" alt="play with Windows Media Player" /></a>
+      <div class="appcaption">Windows Media Player</div>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <p>...and you will receive a small file containing all the settings necessary for your App. Just open this file with your App and you will start listening to EchoRadio.</p>
+  </div>
+  <!--POWERED BY-->
+  <h3>powered by </h3>
+  <div class="textwrap"> <a href="http://easyradio.gr/" target="_blank"><img src="images/ER-logo.gif" width="118" height="67" alt="Easy Radio" /></a></div>
+</div>
+<!--NEWS-->
+<div id="news" class="nonmain tab-pane">
+  <h3>news</h3>
+  <div class="textwrap">
+    <div id="content">
+         <section id="mainContent">
+          <div class="bannerimage"><img src="images/logo4.jpg" alt="logo"/></div>
+          <div>
+            <h3>New Logo</h3>
+            <h4>IN THE STYLE OF THE 1920s</h4>
+          </div>
+          <div class="clear"></div>
+          <p>We changed our logo! Our new logo is a tribute to the very early days of radio, almost a century ago!</p>
+          <div class="bannerimage"><img src="images/play.png" alt="play button"/></div>
+          <div>
+            <h3>New Super Fast Radio Player</h3>
+            <h4>PLAYS ON ALL SMARTPHONES</h4>
+          </div>
+          <div class="clear"></div>
+          <p>Now EchoRadio uses our new home made player for mobile devices. It is extra fast, (no more long waiting until it starts playing) and plays on all smartphones and tablets.<br>
+            So, next time you visit echoradio.de on your mobile, just press the play button and EchoRadio will start playing at once!<br>
+            Give it a try, and tell us about it…. </p>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="container"> <span class="bigicon icon-speedometer "></span>
+    <div class="footerlinks"> 
+      <!-- FOOTER LINKS START -->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#onair">On Air</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:info@echoradio.de">Contact</a></li>
+        <li><a href="#news">News</a></li>
+      </ul>
+    </div>
+    <!-- FOOTER LINKS END -->
+    
+    <div class="copyright"> 
+      <!-- FOOTER COPYRIGHT START -->
+      <p align="center">Copyright &copy; 2016-2022 &middot; All Rights Reserved &middot; <a href="http://echoradio.de/" >Echoradio</a></p>
+    </div>
+    <!-- FOOTER COPYRIGHT END -->
+    
+    <div class="footersocial wow fadeInUp" data-wow-duration="3s"> 
+      <!-- FOOTER SOCIAL ICONS START -->
+      <ul>
+        <li><a href="http://facebook.com/echoradios"><span class="icon-social-facebook"></span></a></li>
+        <li><a href="http://twitter.com/echotwitts"><span class="icon-social-twitter"></span></a></li>
+        <li><a href="#"><span class="icon-social-youtube"></span></a></li>
+        <li><a href="http://echoradio.de"><span class="icon-social-dribbble"></span></a></li>
+        <li><a href="#"><span class="icon-social-tumblr"></span></a></li>
+      </ul>
+    </div>
+    <!-- FOOTER SOCIAL ICONS END --> 
+  </div>
+</footer>
+
+<!-- FOOTER END --> 
+
+<!--HTML RADIO PLAYER--> 
+<script type = "text/javascript">
+radio.addEventListener("loadstart", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Play';
+},false);
+
+radio.addEventListener("stalled", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Buffering...';
+setTimeout(Playing, 30000);
+function Playing() {
+   todoItems.innerHTML = 'Playing...';
+}
+},false);
+
+radio.addEventListener("playing", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Playing...';
+},false);
+
+radio.addEventListener("pause", function(){
+var todoItems = document.getElementById('stream_status');
+todoItems.innerHTML = 'Paused...';
+},false);
+</script> 
+<script type="text/javascript"> 	
+var music = document.getElementById('radio'); 
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause";	
+	} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+} 
+</script> 
+</body>
+</html>
